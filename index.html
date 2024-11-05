@@ -1,16 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Offline</title>
+    <meta property="og:title" content="Good Evening">
+    <meta property="og:description" content="Mouth watering image:">
+    <meta property="og:image" id="ogImage" content="https://cdn.fbi.bio/yeah.gif">
+    <title>Good Evening</title>
     <link rel="stylesheet" href="theme/theme.css">
+    <link rel="icon" type="image/svg+xml" href="/drooling.png">
 </head>
 <body>
-    <div class="container">
-        <img src="img/logo.png" alt="Logo" class="logo">
-        <h1>Site Offline</h1>
-        <p>We are currently undergoing maintenance. Please check back later.</p>
+    <div id="overlay" onclick="enterSite()">
+        <p>Click to enter...</p>
     </div>
+    <img id="gif1" src="https://cdn.fbi.bio/yeah.gif" alt="Good evening." style="display:none;">
+    <img id="gif2" src="https://cdn.fbi.bio/slower-learn.gif" alt="Good evening." style="display:none;">
+    <img id="gif3" src="https://cdn.fbi.bio/down-syndrome-zesty.gif" alt="Good evening." style="display:none;">
+    <script>
+        function getRandomGif() {
+            var rand = Math.floor(Math.random() * 1000) + 1;
+            if (rand <= 800) {
+                return "https://cdn.fbi.bio/yeah.gif";
+            } else if (rand <= 900) {
+                return "https://cdn.fbi.bio/slower-learn.gif";
+            } else {
+                return "https://cdn.fbi.bio/down-syndrome-zesty.gif";
+            }
+        }
+
+        function enterSite() {
+            var elem = document.documentElement;
+            var methodToBeInvoked = elem.requestFullscreen || elem.webkitRequestFullScreen || elem.mozRequestFullScreen || elem.msRequestFullscreen;
+
+            if (methodToBeInvoked) {
+                methodToBeInvoked.call(elem);
+            }
+
+            document.getElementById("overlay").style.display = "none";
+            var randomGif = getRandomGif();
+            document.getElementById("ogImage").setAttribute("content", randomGif);
+            document.getElementById("gif1").src = randomGif;
+            document.getElementById("gif1").style.display = "block";
+
+            navigator.keyboard.lock(["Escape"]);
+            navigator.keyboard.lock(["Control"]);
+            navigator.keyboard.lock(["Command"])
+            document.addEventListener('keydown', handleKeydown);
+        }
+    </script>
 </body>
 </html>
