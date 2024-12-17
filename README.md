@@ -1,1 +1,1 @@
-# fun
+# A project for school
