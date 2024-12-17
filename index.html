@@ -1,54 +1,163 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Put your name in the title tag -->
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Good Evening">
-    <meta property="og:description" content="Mouth watering image:">
-    <meta property="og:image" id="ogImage" content="https://cdn.fbi.bio/yeah.gif">
-    <title>Good Evening</title>
-    <link rel="stylesheet" href="/theme/theme.css">
-    <link rel="icon" type="image/svg+xml" href="/drooling.png">
+    <title>Sample Portfolio</title>
+    <link rel="stylesheet" href="theme/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&family=Staatliches&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div id="overlay" onclick="enterSite()">
-        <p>Click to enter...</p>
+
+    <div class="hero-image"> <!-- This is your background image -->
+
+        <!-- Nav Bar-->
+
+        <div id="navbar">
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+         
+            
+        </div>
+
+        <!-- This is your Artist Statement Section -->
+
+        <div id="about" class="hero-text">
+            <h1>Jane Doe</h1> <!-- Your name here -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam, temporibus est optio maiores
+                quasi tempore? Deserunt quos nihil necessitatibus inventore quas commodi obcaecati doloremque quaerat ut
+                suscipit maxime voluptatem saepe sunt, impedit a tempore voluptate iste et facilis voluptatibus! In
+                voluptas, nisi beatae voluptate libero dolores sunt nemo esse!
+                <br><br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt unde consectetur minus, qui sit eos
+                inventore tempora itaque molestias repudiandae. Labore quasi maiores similique cumque cupiditate, fuga
+                dolore quaerat ratione nisi distinctio quas nulla ea ex veniam tempore assumenda doloribus asperiores,
+                eos non incidunt in autem deserunt iste! Illum, tempore.
+                <br><br>
+
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, architecto veniam id incidunt
+                aliquid laboriosam assumenda vero explicabo! Obcaecati corrupti animi quis at veritatis repudiandae quae
+                placeat amet tempora blanditiis porro aspernatur, nesciunt aliquam magni adipisci omnis quas numquam
+                atque pariatur asperiores labore repellendus consectetur vero hic. Ducimus fuga cupiditate iste
+                doloribus delectus tempora ut ad! Cumque sunt voluptate impedit expedita fugiat quis dignissimos
+                assumenda? Ad, minima. Id, sequi ullam!
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente natus sunt rem tempora velit
+                recusandae quibusdam ducimus illum, culpa assumenda veritatis nobis consequuntur incidunt officiis
+                eligendi eius quidem repellendus! Vel, quae. Ipsa sint voluptatum atque laudantium accusantium. Labore
+                laboriosam repudiandae neque obcaecati tenetur pariatur facere quibusdam laudantium magnam maxime, fugit
+                esse! Quod non assumenda quisquam sapiente autem asperiores. Sequi omnis dolorem illum, minima soluta id
+                ut, amet neque blanditiis, ex quod ducimus doloribus quae autem eligendi consectetur! Commodi, quas ea!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus libero deserunt fuga. Minima
+                voluptatibus laudantium beatae recusandae minus quae dolorum esse, est corporis cumque corrupti tenetur
+                sed expedita aliquam dolores consequatur placeat. Laudantium eum vel recusandae minus, facilis impedit
+                quibusdam?
+                <br><br>
+            </p>
+
+        </div>
     </div>
-    <img id="gif1" src="https://cdn.fbi.bio/yeah.gif" alt="Good evening." style="display:none;">
-    <img id="gif2" src="https://cdn.fbi.bio/slower-learn.gif" alt="Good evening." style="display:none;">
-    <img id="gif3" src="https://cdn.fbi.bio/down-syndrome-zesty.gif" alt="Good evening." style="display:none;">
-    <script>
-        function getRandomGif() {
-            var rand = Math.floor(Math.random() * 1000) + 1;
-            if (rand <= 800) {
-                return "https://cdn.fbi.bio/yeah.gif";
-            } else if (rand <= 900) {
-                return "https://cdn.fbi.bio/slower-learn.gif";
-            } else {
-                return "https://cdn.fbi.bio/down-syndrome-zesty.gif";
-            }
-        }
 
-        function enterSite() {
-            var elem = document.documentElement;
-            var methodToBeInvoked = elem.requestFullscreen || elem.webkitRequestFullScreen || elem.mozRequestFullScreen || elem.msRequestFullscreen;
+<!-- You should have 12 imgs here of your best work. Populate your img folder with jpgs and gifs. Keep file names simple and descriptive -->
 
-            if (methodToBeInvoked) {
-                methodToBeInvoked.call(elem);
-            }
+    <div id="portfolio" class="grid-wrapper">
 
-            document.getElementById("overlay").style.display = "none";
-            var randomGif = getRandomGif();
-            document.getElementById("ogImage").setAttribute("content", randomGif);
-            document.getElementById("gif1").src = randomGif;
-            document.getElementById("gif1").style.display = "block";
 
-            navigator.keyboard.lock(["Escape"]);
-            navigator.keyboard.lock(["Control"]);
-            navigator.keyboard.lock(["Command"])
-            document.addEventListener('keydown', handleKeydown);
-        }
-    </script>
+        <div class="big">
+            <img class="myImg" src="img/AlbumFront2 copy.jpg"
+                alt="This is the front of my album cover I made in Photoshop."> <!-- Put a description in your alt text -->
+        </div>
+
+
+        <div class="">
+            <img class="myImg" src="" alt="This is the book cover I made in Illustrator.">
+        </div>
+
+        <div class="big"> <!-- Use the custom class of "big", "wide" and "tall" to organize your grid to suit your images-->
+            <img class="myImg" src="img/" alt="">
+        </div>
+
+        <div class="">
+            <img class="myImg" src="img/" alt="">
+        </div>
+
+        <div class="wide">
+            <img class="myImg" src="img/" alt="">
+        </div>
+
+        <div class="">
+            <img class="myImg" src="img/"
+                alt="">
+        </div>
+
+        <div class="">
+            <img class="myImg" src="img/jpg"
+                alt="">
+        </div>
+
+        <div class="">
+            <img class="myImg" src="img/"
+                alt="">
+        </div>
+
+        <div class="big">
+            <img class="myImg" src="img/"
+                alt="">
+        </div>
+
+        <div class="tall">
+            <img class="myImg" src="img/"
+                alt="">
+        </div>
+
+        <div class="">
+            <img class="myImg" src="img/"
+                alt="">
+        </div>
+
+        <div class="wide">
+            <img class="myImg" src="img/" alt="">
+        </div>
+
+
+    </div>
+
+
+<!-- This creates the image pop up -->
+
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
+
+<!-- This is your contact section-->
+
+    <div id="contact" class="footer">
+        <p>Jane Doe</p>
+        <a href="mailto:doej7@limestone.on.ca">doej@limestone.on.ca</a>
+    </div>
+
+
+<!-- These scripts fetch the necessary js file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+
+
 </body>
+
 </html>
