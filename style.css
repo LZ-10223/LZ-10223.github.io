@@ -2,7 +2,7 @@ html,
 body {
     background-color: rgb(3, 3, 3); /* Adjust this to change colour of your page background*/
     height: 100%;
-    font-family: 'Patua One', cursive; /* Adjust this to change the font of everything unless otherwise specified further down  */
+    font-family: "DM Serif Text", serif;
 }
 
 
@@ -34,7 +34,7 @@ body {
 }
 
 .hero-image {
-    background-image: url("https://images.pexels.com/photos/1086584/pexels-photo-1086584.jpeg?auto=compress&cs=tinysrgb&w=1600"); /* This is your background image */
+    background-image: url("img/bg.jpg"); /* This is your background image */
     height: 800px; 
     max-width: 100%;
     background-repeat: no-repeat;
